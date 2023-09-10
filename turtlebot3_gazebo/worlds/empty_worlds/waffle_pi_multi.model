@@ -48,7 +48,7 @@
         <namespace>/gazebo</namespace>
       </ros>
 
-      <update_rate>1.0</update_rate>
+      <update_rate>30.0</update_rate>
     </plugin>
 
     <include>
