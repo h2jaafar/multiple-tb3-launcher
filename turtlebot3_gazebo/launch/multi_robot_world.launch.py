@@ -40,21 +40,21 @@ def generate_launch_description():
 
         IncludeLaunchDescription(
             PythonLaunchDescriptionSource([launch_file_dir, '/robot_state_publisher_m.launch.py']),
-            launch_arguments={'use_sim_time': use_sim_time, 'robot_namespace': 'B01'}.items(),
+            launch_arguments={'use_sim_time': use_sim_time, 'robot_namespace': 'B01', 'frame_id' : 'B01/'}.items(),
         ),
 
         IncludeLaunchDescription(
             PythonLaunchDescriptionSource([launch_file_dir, '/robot_state_publisher_m.launch.py']),
-            launch_arguments={'use_sim_time': use_sim_time, 'robot_namespace': 'B02'}.items(),
+            launch_arguments={'use_sim_time': use_sim_time, 'robot_namespace': 'B02', 'frame_id' : 'B02/'}.items(),
         ),
 
         IncludeLaunchDescription(
             PythonLaunchDescriptionSource([launch_file_dir, '/robot_state_publisher_m.launch.py']),
-            launch_arguments={'use_sim_time': use_sim_time, 'robot_namespace': 'B02'}.items(),
+            launch_arguments={'use_sim_time': use_sim_time, 'robot_namespace': 'B03' , 'frame_id' : 'B03/'}.items(),
         ),
 
         IncludeLaunchDescription(
             PythonLaunchDescriptionSource([launch_file_dir, '/robot_state_publisher_m.launch.py']),
-            launch_arguments={'use_sim_time': use_sim_time, 'robot_namespace': 'B02'}.items(),
+            launch_arguments={'use_sim_time': use_sim_time, 'robot_namespace': 'B04', 'frame_id' : 'B04/'}.items(),
         ),
     ])

@@ -31,7 +31,7 @@ def generate_launch_description():
     use_sim_time = LaunchConfiguration('use_sim_time', default='false')
     urdf_file_name = 'turtlebot3_' + TURTLEBOT3_MODEL + '.urdf' 
     robot_namespace = LaunchConfiguration('robot_namespace', default='B01')  # Default namespace is 'robot_ns'
-
+    frame_id = LaunchConfiguration('frame_id', default='B01/')  # Default frame_id is 'map'
     print('urdf_file_name : {}'.format(urdf_file_name))
 
     urdf = os.path.join(
@@ -51,6 +51,6 @@ def generate_launch_description():
             name='robot_state_publisher',
             namespace=robot_namespace,
             output='screen',
-            parameters=[{'use_sim_time': use_sim_time}],
+            parameters=[{'use_sim_time': use_sim_time}, {'frame_prefix': frame_id}],
             arguments=[urdf]),
     ])
